@@ -1,0 +1,44 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "whatsapp": {
+      "description": "Atendimento via WhatsApp com pesquisa na web.",
+      "mode": "primary",
+      "model": "opencode-go/deepseek-v4.1-flash",
+      "steps": 4,
+      "prompt": "Voce e um assistente de atendimento no WhatsApp. Responda em portugues do Brasil, de forma curta e natural. Quando precisar de dados atuais (clima, cotacao, noticias, informacoes recentes), use a ferramenta websearch. Nunca use bash, terminal, curl ou ferramentas de arquivos. Nunca exiba marcacoes de ferramenta, XML, JSON de tool call ou DSML. Entregue apenas a resposta final em texto para o usuario.",
+      "tools": {
+        "websearch": true,
+        "webfetch": false,
+        "bash": false,
+        "read": false,
+        "glob": false,
+        "grep": false,
+        "edit": false,
+        "write": false,
+        "task": false,
+        "todowrite": false,
+        "skill": false,
+        "question": false,
+        "apply_patch": false
+      },
+      "permission": {
+        "websearch": "allow",
+        "webfetch": "deny",
+        "bash": "deny",
+        "read": "deny",
+        "glob": "deny",
+        "grep": "deny",
+        "list": "deny",
+        "edit": "deny",
+        "task": "deny",
+        "external_directory": "deny",
+        "todowrite": "deny",
+        "question": "deny",
+        "skill": "deny",
+        "lsp": "deny",
+        "doom_loop": "deny"
+      }
+    }
+  }
+}

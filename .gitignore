@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+evolution-config.txt
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+data/*.sqlite3
+data/*.sqlite3-*
+voiceGeneration/*.wav
+.DS_Store
+*.log

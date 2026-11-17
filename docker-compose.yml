@@ -1,0 +1,14 @@
+services:
+  bot:
+    build: .
+    container_name: whatsapp-ai-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./prompts:/app/prompts:ro
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
